@@ -1,0 +1,45 @@
+{
+  "name": "ratio-proxy",
+  "productName": "Ratio Proxy",
+  "version": "1.0.0",
+  "description": "Ratio Proxy — local PDF-fetching proxy, wrapped as a tiny macOS app",
+  "main": ".vite/build/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
+  },
+  "keywords": [],
+  "author": {
+    "name": "Adil Kairolla",
+    "email": "adil.kairolla.t@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.11.1",
+    "@electron-forge/maker-dmg": "^7.11.1",
+    "@electron-forge/maker-zip": "^7.11.1",
+    "@electron-forge/plugin-fuses": "^7.11.1",
+    "@electron-forge/plugin-vite": "^7.11.1",
+    "@electron-forge/shared-types": "^7.11.1",
+    "@electron/fuses": "^1.8.0",
+    "@types/electron-squirrel-startup": "^1.0.2",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "electron": "37.10.3",
+    "eslint": "^8.57.1",
+    "eslint-plugin-import": "^2.32.0",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.21"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "electron-squirrel-startup": "^1.0.1",
+    "hono": "^4.11.5",
+    "unpdf": "^1.4.0"
+  }
+}

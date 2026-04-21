@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ratio Proxy</title>
+  </head>
+  <body data-state="stopped">
+    <div class="drag"></div>
+    <div class="glow" aria-hidden="true"></div>
+
+    <main class="shell">
+      <header class="brand">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">RATIO&nbsp;·&nbsp;PROXY</span>
+        <span class="brand__version">v1.0</span>
+      </header>
+
+      <section class="hero">
+        <button
+          class="toggle"
+          id="toggle"
+          role="switch"
+          aria-checked="false"
+          aria-label="Toggle proxy"
+        >
+          <span class="toggle__track">
+            <span class="toggle__label toggle__label--off">OFF</span>
+            <span class="toggle__label toggle__label--on">ON</span>
+            <span class="toggle__handle" aria-hidden="true"></span>
+          </span>
+        </button>
+      </section>
+
+      <section class="status" aria-live="polite">
+        <h1 class="status__label" id="status-label">STOPPED</h1>
+        <p class="status__meta" id="status-meta">
+          localhost<span class="status__sep">:</span>6969
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/renderer.ts"></script>
+  </body>
+</html>
