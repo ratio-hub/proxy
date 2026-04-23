@@ -1,12 +1,7 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'node:path';
-import started from 'electron-squirrel-startup';
 import { serve, type ServerType } from '@hono/node-server';
 import { buildProxyApp, PROXY_PORT } from './proxy-app';
-
-if (started) {
-  app.quit();
-}
 
 let server: ServerType | null = null;
 

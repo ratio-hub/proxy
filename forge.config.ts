@@ -22,14 +22,14 @@ const config: ForgeConfig = {
         mirror: 'https://cdn.npmmirror.com/binaries/electron/',
       },
     },
-    // Enable signing + notarization by setting APPLE_ID / APPLE_PASSWORD / APPLE_TEAM_ID
-    // in the environment (requires Apple Developer membership), then uncomment:
-    // osxSign: {},
-    // osxNotarize: {
-    //   appleId: process.env.APPLE_ID!,
-    //   appleIdPassword: process.env.APPLE_PASSWORD!,
-    //   teamId: process.env.APPLE_TEAM_ID!,
-    // },
+    osxSign: {
+      optionsForFile: () => ({ hardenedRuntime: true }),
+    },
+    osxNotarize: {
+      appleId: process.env.APPLE_ID!,
+      appleIdPassword: process.env.APPLE_APP_SPECIFIC_PASSWORD!,
+      teamId: process.env.APPLE_TEAM_ID!,
+    },
   },
   rebuildConfig: {},
   makers: [
